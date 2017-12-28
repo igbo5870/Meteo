@@ -16,8 +16,8 @@ $('#selec').click(function(){
 	var temp_min = data.main.temp_min;
 	var temp_max = data.main.temp_max;
 
-  	alert("La température est de " + temp + " degrés ")
-  	alert("La pression atmosphèrique est de " + pressure + " hectopascal")
+  	//alert("La température est de " + temp + " degrés ")
+  	//alert("La pression atmosphèrique est de " + pressure + " hectopascal")
 
 	// .InnerBox(function(data){
 
