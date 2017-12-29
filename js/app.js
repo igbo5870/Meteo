@@ -9,7 +9,7 @@
 
 		$.getJSON(lien + ',fr&lang=fr&units=metric&appid=5fe735476d87c79b7f242f8f480d72a0')
 		.then(function(data){
-			//console.log(data);
+			console.log(data);
 
 
 			var temp =  data.main.temp;
@@ -26,10 +26,12 @@
 			$('.pressure').html(pressure + ' hPa');
 			$('.temp_max').html(temp_max + ' °C');
 			$('.temp_min').html(temp_min + ' °C');
-			$('#name').html(name);
-			$('.vent').html(vent * 3.6 + ' km/h');
+			$('.name').html(name);
+			$('.vent').html(Math.round(vent * 3.6) + ' km/h');
 			$('.humidite').html(humidite + ' %');
 			$('.coordonees').html(lattitude + ' lat ' + longitude + ' long ');
+			$('.icone_meteo').html("<img src='http://openweathermap.org/img/w/" + data.weather[0].icon  + ".png' alt='icone meteo' />");
+
 
 
 			var ajouterVille = localStorage.getItem;
