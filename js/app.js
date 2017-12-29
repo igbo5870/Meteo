@@ -3,7 +3,7 @@
 	$('#selec').click(function(){
 
 		var city = $('#ville').val();
-		var lien =  "http://api.openweathermap.org/data/2.5/weather?q=" + city;
+		var lien =  "https://api.openweathermap.org/data/2.5/weather?q=" + city;
 
 		$.getJSON(lien + ',fr&lang=fr&units=metric&appid=5fe735476d87c79b7f242f8f480d72a0')
 		.then(function(data){
