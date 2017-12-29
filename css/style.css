@@ -27,9 +27,15 @@ body{
     height: 30px;
     width: 150px;
 }
-.tableau{
-    margin-left: 30%;
-    text-align: right;
+
+.content{
+    display: flex;
+    justify-content: space-around;
+}
+#mapid{
+    margin-top: 55px;
+    height: 240px;
+    width: 480px;
 }
 footer{
     position:absolute;
