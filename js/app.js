@@ -8,13 +8,39 @@ $('#selec').click(function(){
 
 	$.getJSON(lien + ',fr&lang=fr&units=metric&appid=5fe735476d87c79b7f242f8f480d72a0')
 	.then(function(data){
-	console.log(data);
+	//console.log(data);
 
 	var icon = data.weather.icon;
 	var temp = data.main.temp;
 	var pressure = data.main.pressure;
 	var temp_min = data.main.temp_min;
 	var temp_max = data.main.temp_max;
+	var humidite = data.main.humidity;
+	var lattitude = data.coord.lat;
+	var longitude = data.coord.lon;
+	var vent = data.wind.speed;
+	var name = data.name;
+
+	$('.temp').html(temp + '°C');
+	$('.pressure').html(pressure + 'hPa');
+	$('.temp_max').html(temp_max + '°C');
+	$('.temp_min').html(temp_min + '°C');
+	$('#name').html(name);
+	$('.vent').html(vent + 'm/s');
+	$('.humidite').html(humidite + '%');
+	$('.coordonees').html(lattitude + ' lat  ' + longitude +' long ');
+
+	var ajouterville = localStorage.getItem;
+	localStorage.setItem(localStorage.length, city);
+
+	var select = $("#selectVille");
+	for(i=1; i<localStorage.length; i++){
+		select.append('<option value='+ i + '>' + localStorage.getItem(i)+ '</option>');
+	}
+
+	//je stocke les villes demandées dans la console
+
+
 
   	//alert("La température est de " + temp + " degrés ")
   	//alert("La pression atmosphèrique est de " + pressure + " hectopascal")
@@ -24,10 +50,11 @@ $('#selec').click(function(){
 	// });
 
 	});
-
+	//localStorage.clear(); // vider le cache 
 });
 
 })();
+
 
 
 
