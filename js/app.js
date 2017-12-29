@@ -1,36 +1,39 @@
+
 (function main(){
+// Obtention data meteo
 
-		$('#selec').on('click', function(){
+	$('#selec').click(function(){
 
-			var city = $('#ville').val();
-			var KeyAPI = '5fe735476d87c79b7f242f8f480d72a0';
-			var link = 'https://api.openweathermap.org/data/2.5/weather?q=' + city;
+		var city = $('#ville').val();
+		var lien =  "http://api.openweathermap.org/data/2.5/weather?q=" + city;
 
-// Récupérer Le JSON qui correspond au lien.
-			$.getJSON(link + ',fr&lang=fr&units=metric&appid=' + KeyAPI)
-				.then(function(data){
+		$.getJSON(lien + ',fr&lang=fr&units=metric&appid=5fe735476d87c79b7f242f8f480d72a0')
+		.then(function(data){
+		console.log(data);
+		var temp =  data.main.temp;
+		var pressure = data.main.pressure;
+		var temp_max = data.main.temp_max;
+		var temp_min = data.main.temp_min;
+		var humidite = data.main.humidity;
+		var lattitude = data.coord.lat;
+		var longitude = data.coord.lon;
+		var vent = data.wind.speed;
+		var name = data.name;
 
-						var cityName = data.name;
-						console.log(cityName);
-						var coord = data.coord.lon;
-						console.log(coord);
-						var coord2 = data.coord.lat;
-						console.log(coord2);
-						var windspeed = data.wind.speed;
-						console.log(windspeed);
-						var hum = data.main.humidity;
-						console.log(hum);
-						var pressure = data.main.pressure;
-						console.log(pressure);
-						var tempMain = data.main.temp;
-						console.log(tempMain);
-						// var tempMin = main.temp_min;
-						// console.log(tempMin);
-						// var tempMax = main.temp_max;
-						// console.log(tempMax);
+		$('.temp').html(temp + ' °C');
+		$('.pressure').html(pressure + ' hPa');
+		$('.temp_max').html(temp_max + ' °C');
+		$('.temp_min').html(temp_min + ' °C');
+		$('#name').html(name);
+		$('.vent').html(vent * 3.6 + ' km/h');
+		$('.humidite').html(humidite + ' %');
+		$('.coordonees').html(coordonees + ' ll');
 
-					})
-			});
 
+
+
+		});
+
+	});
 
 })();
