@@ -22,13 +22,13 @@
 		var longitude = data.coord.lon;
 		var vent = data.wind.speed;
 		var name = data.name;
-
+		
 		$('.temp').html(temp + ' °C');
 		$('.pressure').html(pressure + ' hPa');
 		$('.temp_max').html(temp_max + ' °C');
 		$('.temp_min').html(temp_min + ' °C');
 		$('#name').html(name);
-		$('.vent').html(vent + ' m/s');
+		$('.vent').html(vent * 3.6 + ' km/h');
 		$('.humidite').html(humidite + ' %');
 		$('.coordonees').html(lattitude + ' lat ' + longitude + ' long');
 

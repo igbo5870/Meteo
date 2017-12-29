@@ -1,32 +1,68 @@
-.morpion--table td {
-    height:10em;
-    width:10em;
-    border: 1px solid black;
+
+body{
+    min-height: 100%;
+}
+.wrapper{
+    display: flex;
+    margin: auto;
+    text-align: center;
+    background-color: #E1E1E1;
+    height: 100px;
+    justify-content: space-around;
 }
 
-.render--player {
-    color: rgb(175, 8, 8);
-    font-size: 50px;
-    font-weight: 900;
+.rechercher{
+    width: 300px;
+    display: flex;
+    justify-content: space-around;
 }
-.rouge{color:red}
-.vert{color:green}
+.rechercher input, .rechercher button{
+    margin-top: 30px;
+    text-align: center;
+    border-radius: 0%;
+    border: 0px;
+    height: 30px;
+}
+.tableau{
+    margin-left: 30%;
+    text-align: center;
+}
+footer{
+    position:absolute;
+    bottom:0;
+    width:100%;
+    padding-top:50px;
+    height:50px;
+    background-color: #E1E1E1;
+}
 
 table
 {
     border-collapse: collapse; /* Les bordures du tableau seront collées (plus joli) */
+    
 }
+
 th{
-	height: 20px;
+	height: 50px;
+    width: 400px;
+    text-align: center;
+    font-size: 2em;
+
 }
 
 td
 {
     border: 1px solid black;
     width: 200px;
+    height: 30px;
+    padding-left: 5px;
 }
 
 tr /* Toutes les cellules des tableaux... */
 {
-    border: 1px solid black; /* auront une bordure de 1px */
+    /*border: 1px solid black;  auront une bordure de 1px */
+}
+
+.tr_temp, .tr_temp_min, .tr_vent, .tr_coordonees{
+    background-color: #F9F9F9;
 }
