@@ -1,81 +1,59 @@
-
-body{
-    min-height: 100%;
+html, body { 
+  min-height: 100%; 
+  font-family: Georgia;
 }
-.wrapper{
-    display: flex;
+
+body {
+    background-image: url("feuartifice.jpeg");
+    background-size: cover;
+}
+
+.fred{
     margin: auto;
+    border-radius: 60px;
+    border: 1px;
+    line-height: 50px; 
     text-align: center;
-    background-color: #E1E1E1;
-    height: 100px;
-    justify-content: space-around;
+    font-family: Purisa;
+    font-size: 25px;
+    color: #ff0093;
 }
 
-.rechercher{
-    display: flex;
-    justify-content: space-around;
-    margin-top: 30px;
-}
-.rechercher input, .rechercher button{
-    text-align: center;
-    border-radius: 0%;
-    border: 0px;
-    height: 30px;
-}
-
-.rechercher select{
-    height: 30px;
+.btn1{
     width: 150px;
+    line-height: 50px;
+    color : #ff0093;
+    text-decoration: none;
+    margin-left: : auto;
+    margin-right: auto;
+    border-radius: 30px; 
+    border: 1px;
+    font-size: 25px;
+    font-family: Purisa;
+    font-weight: bold;
 }
 
-.content{
-    display: flex;
-    justify-content: space-around;
-}
-#mapid{
-    margin-top: 55px;
-    height: 240px;
-    width: 480px;
-}
-footer{
-    position:absolute;
-    bottom:0;
-    width:100%;
-    padding-top:50px;
-    height:50px;
-    background-color: #E1E1E1;
-}
-
-table
-{
-    border-collapse: collapse; /* Les bordures du tableau seront collées (plus joli) */
-    
-}
-
-th{
-	height: 50px;
-    width: 400px;
+.Rebours{
+    display: block;
+    color:#ff0093;
+    height: 500px;
     text-align: center;
-    font-size: 2em;
-
+    font-family: Purisa;
+    font-size: 150px;
+    margin-top: 80px;
 }
 
-td
-{
-    border: 1px solid black;
-    width: 200px;
-    height: 30px;
-    padding-left: 5px;
+.container{
+    display: flex;
+    padding-top: 250px;
+
 }
-
-tr /* Toutes les cellules des tableaux... */
-{
-    /*border: 1px solid black;  auront une bordure de 1px */
+.COUNTDOWN{
+    display: block;
+    height: 100px;
+    color: #19a1a2;
+    text-align: center;
+    font-size: 100px;
+    font-family: Purisa;
+    font-weight: bold;
 }
-
-.tr_temp, .tr_temp_min, .tr_vent, .tr_coordonees{
-    background-color: #F9F9F9;
-}
-
-
-
